@@ -1,0 +1,52 @@
+.chatbox__container {
+  .chatbox {
+    box-sizing: border-box;
+    height: 500px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 20px;
+    .message__container {
+      display: inline-flex;
+      width: 100%;
+      margin: 5px;
+
+      .message__image {
+        width: 40px;
+        height: 30px;
+        display: inline-flex;
+        .profile__image {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 4rem;
+        }
+      }
+      .message__text {
+        border-radius: 1rem;
+        background-color: blanchedalmond;
+        padding: 5px 3px 3px 3px;
+        padding-left: 30px;
+        word-wrap: break-word;
+        margin: 0;
+        border-top-left-radius: 0;
+      }
+      .reply {
+        background-color: rgb(148, 148, 228);
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  .message__box {
+    padding: 10px;
+    margin-top: 20px;
+    .form-inline {
+      flex: 1 1;
+      flex-wrap: nowrap;
+    }
+    .message__input {
+      width: 100%;
+    }
+  }
+}
