@@ -5,8 +5,8 @@ import { Button, Form, FormControl } from 'react-bootstrap';
 export default function ChatBox() {
     return (
         <div className="chatbox__container">
-            <h2 className="text-center">Chat Box1</h2>
-            <div className="chatbox">
+            <h4>Chat</h4>
+            <div className="chatbox d-flex flex-column align-items-start justify-content-end">
                 <div className="message__container">
                     <div className="message__image">
                         <img className="profile__image" src="/default-profile-icon.jpg" alt="" />
