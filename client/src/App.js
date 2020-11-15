@@ -1,36 +1,22 @@
 import React from 'react'
 import './assets/app.scss'
-import { Header, Footer, ChatBox, SideBar, SignIn } from './Component'
-import { Container, Col, Row } from 'react-bootstrap';
+import { Header, Footer } from './Component'
+import { AuthProvider } from "./Context/AuthContext"
+import { ChatContextProvider } from "./Context/ChatContext"
 
-
-import { auth } from './Context/firebase'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { useCollectionData } from 'react-firebase-hooks/firestore'
-
+import AppContent from './AppContent'
 
 function App() {
-  const [user] = useAuthState(auth);
   return (
-    <div className="App">
-      <Header user={user} />
-      <Container className="content__container">
-        <Container fluid>
-          {user ?
-            <Row>
-              <Col md={4}>
-                <SideBar />
-              </Col>
-              <Col md={8}>
-                <ChatBox />
-              </Col>
-            </Row>
-            : <SignIn />
-          }
-        </Container>
-      </Container>
-      <Footer />
-    </div >
+    <AuthProvider>
+      <ChatContextProvider>
+        <div className="App">
+          <Header />
+          <AppContent />
+          <Footer />
+        </div >
+      </ChatContextProvider>
+    </AuthProvider>
   );
 }
 export default App;

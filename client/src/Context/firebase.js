@@ -1,8 +1,7 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { useCollectionData } from 'react-firebase-hooks/firestore'
+
 firebase.initializeApp({
     apiKey: "AIzaSyC1eAgL2Ud3md60jz9yLTg7hjkwtuJPL8g",
     authDomain: "chat-app-3cb1a.firebaseapp.com",
@@ -15,5 +14,6 @@ firebase.initializeApp({
 })
 const auth = firebase.auth()
 const firestore = firebase.firestore()
+
 
 export { firebase, auth, firestore }

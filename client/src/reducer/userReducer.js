@@ -1,5 +1,5 @@
 const initialState = {
-
+    user: null
 }
 
 export default (state = initialState, { type, payload }) => {
