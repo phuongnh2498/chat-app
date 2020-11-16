@@ -8,7 +8,9 @@ export default function Header() {
 
     return (
         <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="/" className="mr-auto">Chat App</Navbar.Brand>
+            <Navbar.Brand href="/" className="mr-auto">
+                <h3><span role="img" aria-label="dragon">Just Be 😎</span></h3>
+            </Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link href="/">{currentUser ? currentUser.email : "Login"}</Nav.Link>
             </Nav>
