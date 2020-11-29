@@ -11,10 +11,7 @@ export default function AppContent() {
                 <Container fluid>
                     {currentUser ?
                         <Row>
-                            <Col md={4}>
-                                <SideBar />
-                            </Col>
-                            <Col md={8}>
+                            <Col md={12}>
                                 <ChatBox />
                             </Col>
                         </Row>

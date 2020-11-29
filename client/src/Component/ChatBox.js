@@ -24,7 +24,7 @@ export default function ChatBox() {
 
     return (
         <div className="chatbox__container">
-            <h4>Chat</h4>
+            <h4><span role="img" aria-label="dragon">Send A Message 🕊</span></h4>
             <div className="chatbox">
                 {
                     messages?.map(msg => <ChatMessage key={msg.id} message={msg} />)
